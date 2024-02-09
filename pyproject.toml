@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "py-project-template"
+name = "pygizmokit"
 version = "0.1.0"
 description = ""
 authors = ["Atticuszz <1831768457@qq.com>"]
 readme = "README.md"
-packages = [{include = "src", from = "."}]
+packages = [{include = "pygizmokit", from = "."}]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
@@ -21,15 +21,15 @@ pytest-cov = "^4.1.0"
 [tool.poetry.scripts]
 tests = 'poetry_scripts:run_tests'
 
-#[tool.semantic_release]
-#version_variable = "pyproject.toml:tool.poetry.version"
-#branch = "main"
-#upload_to_PyPI = false  # 禁用上传到 PyPI
-#upload_to_release = true  # 启用上传到 GitHub Releases
-#build_command = "pip install poetry && poetry build"
-#commit_message = "chore(release): bump version to v{version}"
-#changelog_components = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
-#changelog_file = "CHANGELOG.md"
+[tool.semantic_release]
+version_variable = "pyproject.toml:tool.poetry.version"
+branch = "main"
+upload_to_PyPI = true  
+upload_to_release = true  
+build_command = "pip install poetry && poetry build"
+commit_message = "chore(release): bump version to v{version}"
+changelog_components = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
+changelog_file = "CHANGELOG.md"
 
 [build-system]
 requires = ["poetry-core"]
