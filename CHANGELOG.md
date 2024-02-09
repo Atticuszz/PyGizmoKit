@@ -2,7 +2,18 @@
 
 
 
+## v0.3.0 (2024-02-09)
+
+### Feature
+
+* feat: Update pyproject.toml ([`4655dc4`](https://github.com/Atticuszz/PyGizmoKit/commit/4655dc4b9515e21b8165f9f6d17953b9694263d7))
+
+
 ## v0.2.0 (2024-02-09)
+
+### Chore
+
+* chore(release): bump version to v0.2.0 ([`149d4c1`](https://github.com/Atticuszz/PyGizmoKit/commit/149d4c1cd9dc0fc000c405e327b4048f32e7ee1e))
 
 ### Feature
 
