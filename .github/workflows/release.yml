@@ -34,6 +34,7 @@ jobs:
       - name: Pull latest changes
         run: git pull origin main
       - name: Python Semantic Release
+        id:release
         uses: python-semantic-release/python-semantic-release@master
         with:
           github_token: ${{ secrets.ATTICUS_PAT }}
