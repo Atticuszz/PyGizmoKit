@@ -9,7 +9,9 @@ on:
       ATTICUS_PAT:
         required: true
 
-
+permissions:
+  contents: read
+  id-token: write
 
 jobs:
   semantic-release:
