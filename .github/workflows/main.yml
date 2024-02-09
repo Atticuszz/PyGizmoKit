@@ -28,5 +28,7 @@ jobs:
   release:
 #    needs: tests
     uses: ./.github/workflows/release.yml
+    secrets:
+      ATTICUS_PAT: ${{ secrets.ATTICUS_PAT }}
     with:
       python-version: "3.10"

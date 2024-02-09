@@ -5,7 +5,9 @@ on:
       python-version:
         required: true
         type: string
-
+    secrets:
+      ATTICUS_PAT:
+        required: true
 
 
 
