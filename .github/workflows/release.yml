@@ -37,3 +37,7 @@ jobs:
         uses: python-semantic-release/python-semantic-release@master
         with:
           github_token: ${{ secrets.ATTICUS_PAT }}
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@v1.8.11
+        # NOTE: DO NOT wrap the conditional in ${{ }} as  evaluate to true.
+        if: steps.release.outputs.released == 'true'
