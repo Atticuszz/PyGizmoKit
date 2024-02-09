@@ -31,4 +31,4 @@ COPY . /app
 #EXPOSE 5000
 #
 ## 运行 FastAPI 应用
-#CMD ["uvicorn", "src.app.main:app", "--host", "0.0.0.0", "--port", "5000"]
+#CMD ["uvicorn", "pygizmokit.app.main:app", "--host", "0.0.0.0", "--port", "5000"]

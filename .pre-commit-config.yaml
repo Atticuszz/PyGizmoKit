@@ -77,7 +77,7 @@ repos:
     hooks:
       - id: flake8
         args:
-          - '--max-line-length=88'
+          - '--max-line-length=188'
           - '--ignore=E203,W503,F401'
         language: python
         types: [ python ]
@@ -87,7 +87,7 @@ repos:
     hooks:
       - id: mypy
         args: [ --ignore-missing-imports,--disallow-untyped-defs, --show-error-codes ]
-#          additional_dependencies: [ types-requests, types-setuptools ]  # 如果需要额外的类型存根
+        additional_dependencies: [ types-requests, types-setuptools ]  # 如果需要额外的类型存根
 
 ci:
     # Settings for the https://pre-commit.ci/ continuous integration service
