@@ -13,6 +13,7 @@ on:
 jobs:
   semantic-release:
     name: Semantic Release and Publish
+    concurrency: release
     runs-on: ubuntu-latest
     environment:
       name: pypi
@@ -43,7 +44,7 @@ jobs:
         id: release
         uses: python-semantic-release/python-semantic-release@master
         with:
-          github_token: ${{ secrets.ATTICUS_PAT }}
+          github_token: ${{ secrets.GITHUB_TOKEN  }}
 
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@v1.8.11
@@ -54,4 +55,4 @@ jobs:
         uses: python-semantic-release/upload-to-gh-release@main
         if: steps.release.outputs.released == 'true'
         with:
-          github_token: ${{ secrets.ATTICUS_PAT }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
