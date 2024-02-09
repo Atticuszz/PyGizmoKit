@@ -2,7 +2,26 @@
 
 
 
+## v0.4.0 (2024-02-09)
+
+### Feature
+
+* feat: Update pyproject.toml ([`d98dfb2`](https://github.com/Atticuszz/PyGizmoKit/commit/d98dfb2d5f8738fed1554432c73bfb1ab704725f))
+
+### Unknown
+
+* fix:Update pyproject.toml ([`f99fa6d`](https://github.com/Atticuszz/PyGizmoKit/commit/f99fa6d939f93fd317c8db6c39c5ebac98031315))
+
+* fix:Update release.yml ([`1c81ff3`](https://github.com/Atticuszz/PyGizmoKit/commit/1c81ff3d100365d39ac3c2c7614b61b1c17fb43b))
+
+* fix:Update release.yml ([`02c540a`](https://github.com/Atticuszz/PyGizmoKit/commit/02c540a0ce105c1f2961f4adcf3093917c7dd897))
+
+
 ## v0.3.0 (2024-02-09)
+
+### Chore
+
+* chore(release): bump version to v0.3.0 ([`6be6983`](https://github.com/Atticuszz/PyGizmoKit/commit/6be6983896ceee597ee4d66f3d216aa0e4d03bfb))
 
 ### Feature
 
