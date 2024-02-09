@@ -1,13 +1,8 @@
 name: Release Workflow
 on:
-  workflow_call:
-    inputs:
-      python-version:
-        required: true
-        type: string
-    secrets:
-      ATTICUS_PAT:
-        required: true
+  push:
+    branches:
+      - main
 
 
 jobs:
@@ -28,15 +23,15 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.ATTICUS_PAT }}
-      - name: Set up Python ${{ inputs.python-version }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ inputs.python-version }}
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install poetry
-          poetry install
+#      - name: Set up Python 3.11
+#        uses: actions/setup-python@v5
+#        with:
+#          python-version: 3.11
+#      - name: Install dependencies
+#        run: |
+#          python -m pip install --upgrade pip
+#          pip install poetry
+#          poetry install
       - name: Pull latest changes
         run: git pull origin main
 
