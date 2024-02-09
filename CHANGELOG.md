@@ -2,7 +2,22 @@
 
 
 
+## v0.4.9 (2024-02-09)
+
+### Fix
+
+* fix: update ci ([`36738f8`](https://github.com/Atticuszz/PyGizmoKit/commit/36738f843b6838900f4793dffac789ae3273e216))
+
+### Unknown
+
+* fix：Update release.yml ([`ccfa888`](https://github.com/Atticuszz/PyGizmoKit/commit/ccfa888995a0516567d0d38399e1f5335435f80a))
+
+
 ## v0.4.8 (2024-02-09)
+
+### Chore
+
+* chore(release): bump version to v0.4.8 ([`0b8149e`](https://github.com/Atticuszz/PyGizmoKit/commit/0b8149e9325ba722f058be8847738225c1fce7ba))
 
 ### Fix
 
