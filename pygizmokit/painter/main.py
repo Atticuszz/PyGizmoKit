@@ -1,9 +1,9 @@
 """
 -*- coding: utf-8 -*-
 @Organization : SupaVision
-@Author       : 18317
-@Date Created : 09/02/2024
-@Description  :
+@Author: 18317
+@Date Created: 09/02/2024
+@Description :
 """
 import seaborn as sns
 import matplotlib.pyplot as plt
