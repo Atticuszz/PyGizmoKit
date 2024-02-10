@@ -59,10 +59,11 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish package distributions to PyPI
-        uses: pypa/gh-action-pypi-publish@v1.8.11
-        # NOTE: DO NOT wrap the conditional in ${{ }} as  evaluate to true.
-        if: steps.release.outputs.released == 'true'
+      - name: Configure PyPI token
+        run: poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
+
+      - name: Build and Publish to PyPI
+        run: poetry publish --build
 
       - name: Publish package distributions to GitHub Releases
         uses: python-semantic-release/upload-to-gh-release@main
