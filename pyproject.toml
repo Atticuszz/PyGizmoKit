@@ -4,7 +4,8 @@ version = "0.3.112"
 description = ""
 authors = ["Atticuszz <1831768457@qq.com>"]
 readme = "README.md"
-
+homepage ="https://github.com/Atticuszz/pygizmokit"
+repository="https://github.com/Atticuszz/pygizmokit"
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
 requests = "^2.31.0"
