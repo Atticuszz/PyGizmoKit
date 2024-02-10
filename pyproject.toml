@@ -30,7 +30,8 @@ markdown = 'useful_scripts.markdown.main:main'
 
 
 [tool.semantic_release]
-version_variable = "pyproject.toml:tool.poetry.version"
+version_variable = ["pygizmokit/__init__.py:__version__"]
+version_toml = ["pyproject.toml:tool.poetry.version"]
 branch = "main"
 upload_to_PyPI = true
 upload_to_release = true
