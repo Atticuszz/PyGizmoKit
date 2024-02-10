@@ -41,12 +41,6 @@ jobs:
     if: ${{ !startsWith(github.event.head_commit.message, 'bump') && !startsWith(github.event.head_commit.message, 'chore') && github.ref == 'refs/heads/main' && github.event_name == 'push' && github.repository_owner == 'Atticuszz' }}
     runs-on: ubuntu-latest
     name: "Bump version, create changelog and publish"
-    environment:
-      name: pypi
-      url: https://pypi.org/project/pygizmokit/
-    permissions:
-      id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
-      contents: write # needed for GitHub actions bot to write to repo
     steps:
       - name: Clone Repository
         uses: actions/checkout@v3
