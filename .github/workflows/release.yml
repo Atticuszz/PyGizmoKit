@@ -42,46 +42,20 @@ jobs:
     runs-on: ubuntu-latest
     name: "Bump version, create changelog and publish"
     steps:
-      - name: Clone Repository
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ github.ref }}
-          fetch-depth: 0
-          token: ${{ secrets.ATTICUS_PAT }}
-
-      # auto calculate the next version number
-      - name: Python Semantic Release
-        id: release
-        uses: python-semantic-release/python-semantic-release@master
+      - name: Python Package Release
+        uses: Atticuszz/Poetry-semantic-release@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_pat: ${{ secrets.ATTICUS_PAT }}
+          pypi_token: ${{ secrets.PYPI_API_TOKEN }}
 
-      # use poetry to publish pypi package
-      - name: Set up Poetry
-        uses: abatilo/actions-poetry@v2.4.0
+
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build and Push Docker Image
+        uses: Atticuszz/docker-image-build-push@main
         with:
-          poetry-version: 1.7.1
-
-      - name: Configure PyPI token adn Publish to PyPI
-        run: |
-          poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
-          poetry publish
-
-
-
-      # upload package distributions to GitHub Releases
-      - name: Publish package distributions to GitHub Releases
-        uses: python-semantic-release/upload-to-gh-release@main
-        if: steps.release.outputs.released == 'true'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-#  docker-build:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Build and Push Docker Image
-#        uses: Atticuszz/docker-image-build-push@v0.0.1
-#        with:
-#          docker_hub_username: ${{ secrets.DOCKER_HUB_USERNAME }}
-#          docker_hub_access_token: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-#          image_name: "atticuszhou/pygizmokit:latest"
+          docker_hub_username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          docker_hub_access_token: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+          image_name: "atticuszhou/pygizmokit:latest"
