@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pygizmokit"
-version = "0.4.13"
+version = "0.4.14"
 description = ""
 authors = ["Atticuszz <1831768457@qq.com>"]
 readme = "README.md"
