@@ -36,60 +36,58 @@ jobs:
 #      - name: Upload Coverage
 #        uses: codecov/codecov-action@v1
 
-#  publish:
-##    needs: test
-#    if: ${{ !startsWith(github.event.head_commit.message, 'bump') && !startsWith(github.event.head_commit.message, 'chore') && github.ref == 'refs/heads/main' && github.event_name == 'push' && github.repository_owner == 'Atticuszz' }}
-#    runs-on: ubuntu-latest
-#    name: "Bump version, create changelog and publish"
-#    environment:
-#      name: pypi
-#      url: https://pypi.org/project/pygizmokit/
-#    permissions:
-#      id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
-#      contents: write # needed for GitHub actions bot to write to repo
-#    steps:
-#      - name: Clone Repository
-#        uses: actions/checkout@v3
-#        with:
-#          ref: ${{ github.ref }}
-#          fetch-depth: 0
-#          token: ${{ secrets.ATTICUS_PAT }}
-#      - name: Python Semantic Release
-#        id: release
-#        uses: python-semantic-release/python-semantic-release@master
-#        with:
-#          github_token: ${{ secrets.GITHUB_TOKEN }}
-#      - name: Set up Poetry
-#        uses: abatilo/actions-poetry@v2.4.0
-#        with:
-#          poetry-version: 1.7.1
-#      - name: Setup permissions
-#        run: |
-#          mkdir -p dist
-#          sudo chown -R $USER:$USER dist
-#          chmod -R 755 dist/
-#
-#      - run: poetry build
-#      - name: Configure PyPI token
-#        run: poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
-#
-#      - name: Build and Publish to PyPI
-#        env:
-#          POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_API_TOKEN }}
-#        run: poetry publish  -n -v
-#
-#      - name: Publish package distributions to GitHub Releases
-#        uses: python-semantic-release/upload-to-gh-release@main
-#        if: steps.release.outputs.released == 'true'
-#        with:
-#          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-  docker-build:
+  publish:
+#    needs: test
+    if: ${{ !startsWith(github.event.head_commit.message, 'bump') && !startsWith(github.event.head_commit.message, 'chore') && github.ref == 'refs/heads/main' && github.event_name == 'push' && github.repository_owner == 'Atticuszz' }}
     runs-on: ubuntu-latest
+    name: "Bump version, create changelog and publish"
+    environment:
+      name: pypi
+      url: https://pypi.org/project/pygizmokit/
+    permissions:
+      id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
+      contents: write # needed for GitHub actions bot to write to repo
     steps:
-      - name: Build and Push Docker Image
-        uses: Atticuszz/docker-image-build-push@v0.0.1
+      - name: Clone Repository
+        uses: actions/checkout@v3
         with:
-          docker_hub_username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          docker_hub_access_token: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-          image_name: "atticuszhou/pygizmokit:latest"
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+          token: ${{ secrets.ATTICUS_PAT }}
+      - name: Python Semantic Release
+        id: release
+        uses: python-semantic-release/python-semantic-release@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Set up Poetry
+        uses: abatilo/actions-poetry@v2.4.0
+        with:
+          poetry-version: 1.7.1
+      - name: Setup permissions
+        run: |
+          mkdir -p dist
+          sudo chown -R $USER:$USER dist
+          chmod -R 755 dist/
+
+      - run: poetry build
+      - name: Configure PyPI token
+        run: poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
+
+      - name: Build and Publish to PyPI
+        run: poetry publish
+
+      - name: Publish package distributions to GitHub Releases
+        uses: python-semantic-release/upload-to-gh-release@main
+        if: steps.release.outputs.released == 'true'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+#  docker-build:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Build and Push Docker Image
+#        uses: Atticuszz/docker-image-build-push@v0.0.1
+#        with:
+#          docker_hub_username: ${{ secrets.DOCKER_HUB_USERNAME }}
+#          docker_hub_access_token: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+#          image_name: "atticuszhou/pygizmokit:latest"
