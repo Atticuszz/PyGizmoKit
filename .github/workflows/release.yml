@@ -89,3 +89,7 @@ jobs:
     steps:
       - name: Build and Push Docker Image
         uses: Atticuszz/docker-image-build-push@v0.0.1
+        with:
+          docker_hub_username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          docker_hub_access_token: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+          image_name: "atticuszhou/pygizmokit:latest"
