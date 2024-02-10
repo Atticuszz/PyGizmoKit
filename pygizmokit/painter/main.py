@@ -5,8 +5,9 @@
 @Date Created: 09/02/2024
 @Description :
 """
-import seaborn as sns
+
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 # 加载数据集
 tips = sns.load_dataset("tips")

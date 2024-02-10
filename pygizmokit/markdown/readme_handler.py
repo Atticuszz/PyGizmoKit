@@ -96,7 +96,7 @@ class MarkdownFormatter:
         return any(path.name.startswith(prefix) for prefix in self.omit_prefixes)
 
     def replace_spaces_in_path(
-            self, abs_path: Path, replace_with: str = "_"
+        self, abs_path: Path, replace_with: str = "_"
     ) -> tuple[str, str]:
         """
         Replace spaces in file_path with the specified character.
@@ -154,8 +154,8 @@ class MarkdownFormatter:
             # try find it in root dir
             for new_abs_path in self.root_path.rglob("*"):
                 if (
-                        not self.omited_file(new_abs_path)
-                        and new_abs_path.stem == file_name
+                    not self.omited_file(new_abs_path)
+                    and new_abs_path.stem == file_name
                 ):
                     return prefix + self.replace_spaces_in_path(new_abs_path)[1]
 
@@ -241,17 +241,17 @@ class MarkdownHandler(MarkdownFormatter):
         links = []
         for item in path.iterdir():
             if (
-                    item.is_dir()
-                    and not self.omited_file(item)
-                    and "assets" not in item.as_posix()
+                item.is_dir()
+                and not self.omited_file(item)
+                and "assets" not in item.as_posix()
             ):
                 links.append(f"{'  ' * level}- **{item.name}/:**")
                 links.extend(self._create_links(item, level + 1))
             elif (
-                    item.is_file()
-                    and not self.omited_file(item)
-                    and "assets" not in item.as_posix()
-                    and level > 0
+                item.is_file()
+                and not self.omited_file(item)
+                and "assets" not in item.as_posix()
+                and level > 0
             ):
                 rel_path = item.relative_to(self.root_path)
                 links.append(f"{'  ' * level}- {self.generate_link(rel_path)}")
@@ -317,9 +317,9 @@ class MarkdownHandler(MarkdownFormatter):
                 if line.strip() == header_title:
                     start_index = i + 1
                 elif (
-                        start_index is not None
-                        and line.startswith("## ")
-                        and not line.strip() == header_title
+                    start_index is not None
+                    and line.startswith("## ")
+                    and not line.strip() == header_title
                 ):
                     end_index = i
                     break

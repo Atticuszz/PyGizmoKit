@@ -148,6 +148,7 @@ class MultiDownloader:
     def _unzip_file(self) -> None:
         """unzip file with folder name of itself to output folder"""
         for file_path in self.output_dir.rglob("*"):
+
             if unzipper.able_to_unzip(file_path):
                 unzipper.select(file_path).unzip()
                 file_path.unlink()

@@ -65,8 +65,6 @@ class UnzipManager:
 
     def able_to_unzip(self, file_path: Path | str) -> bool:
         """check if the file is able to unzip."""
-        if self.file_path is None:
-            return False
         file_path = path_check(file_path)
         if file_path and self.handlers.get(file_path.suffix):
             return True

@@ -77,7 +77,7 @@ def print_directory_structure(startpath: Path | str) -> None:
         p for p in startpath.rglob("*") for ex in excluded if ex in p.as_posix()
     ]
 
-    def recurse_folder(folder, prefix="")-> None:
+    def recurse_folder(folder, prefix="") -> None:
         # Get all entries in the folder
         entries = sorted(
             [e for e in folder.iterdir() if e not in excluded_paths],
