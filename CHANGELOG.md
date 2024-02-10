@@ -2,7 +2,22 @@
 
 
 
+## v0.4.15 (2024-02-10)
+
+### Fix
+
+* fix: update ci ([`b4d0b44`](https://github.com/Atticuszz/PyGizmoKit/commit/b4d0b44c2597943b378eeb1c8037957350147482))
+
+### Unknown
+
+* Merge remote-tracking branch &#39;origin/main&#39; ([`4a1c6a7`](https://github.com/Atticuszz/PyGizmoKit/commit/4a1c6a79077b991956295a5ddf603f560aa4a3cc))
+
+
 ## v0.4.14 (2024-02-10)
+
+### Chore
+
+* chore(release): bump version to v0.4.14 ([`84f8f20`](https://github.com/Atticuszz/PyGizmoKit/commit/84f8f20f0ddc3c2091700d43358f9ce60bc6fddd))
 
 ### Fix
 
