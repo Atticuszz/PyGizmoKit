@@ -67,7 +67,7 @@ jobs:
         run: poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
 
       - name: Build and Publish to PyPI
-        run: poetry publish --build
+        run: |
           rm -rf dist/
           mkdir -p dist
           sudo chown -R $USER:$USER dist
