@@ -49,12 +49,14 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.ATTICUS_PAT }}
 
+      # auto calculate the next version number
       - name: Python Semantic Release
         id: release
         uses: python-semantic-release/python-semantic-release@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
+      # use poetry to publish pypi package
       - name: Set up Poetry
         uses: abatilo/actions-poetry@v2.4.0
         with:
@@ -75,8 +77,10 @@ jobs:
           mkdir -p dist
           sudo chown -R $USER:$USER dist
           chmod -R 755 dist/
-          poetry publish --build -n
+          poetry build 
+          poetry publish 
 
+      # upload package distributions to GitHub Releases
       - name: Publish package distributions to GitHub Releases
         uses: python-semantic-release/upload-to-gh-release@main
         if: steps.release.outputs.released == 'true'
