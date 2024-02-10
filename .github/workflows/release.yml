@@ -75,13 +75,13 @@ jobs:
           poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
 
       - name: Build and Publish to PyPI
-        run: |
+        run: poetry publish --build
 #          rm -rf dist/
 #          mkdir -p dist
 #          sudo chown -R $USER:$USER dist
 #          chmod -R 755 dist/
 #          poetry build
-          poetry publish --build
+
 
       # upload package distributions to GitHub Releases
       - name: Publish package distributions to GitHub Releases
