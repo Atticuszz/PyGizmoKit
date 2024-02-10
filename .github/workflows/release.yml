@@ -42,6 +42,13 @@ jobs:
     runs-on: ubuntu-latest
     name: "Bump version, create changelog and publish"
     steps:
+      - name: Clone Repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+          token: ${{ secrets.ATTICUS_PAT }}
+
       - name: Python Package Release
         uses: Atticuszz/Poetry-semantic-release@main
         with:
