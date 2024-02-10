@@ -2,7 +2,24 @@
 
 
 
+## v0.4.22 (2024-02-10)
+
+### Fix
+
+* fix: update ci ([`8fafeae`](https://github.com/Atticuszz/PyGizmoKit/commit/8fafeaea98bd14158ec99b4055a534c619872841))
+
+* fix: update ci ([`5273a34`](https://github.com/Atticuszz/PyGizmoKit/commit/5273a34b0f0ce1df4d1f7b07b09bed520c3a2561))
+
+* fix: update ci ([`36e6916`](https://github.com/Atticuszz/PyGizmoKit/commit/36e69168a468b47b259985d7a765e20e2847544f))
+
+* fix: update ci ([`b43c7c6`](https://github.com/Atticuszz/PyGizmoKit/commit/b43c7c6a294a8146d5cf099cbc8e49a69455bc5c))
+
+
 ## v0.4.21 (2024-02-10)
+
+### Chore
+
+* chore(release): bump version to v0.4.21 ([`fbee0a5`](https://github.com/Atticuszz/PyGizmoKit/commit/fbee0a5a7cd15b82baa9e5e86d97038d2a87afb5))
 
 ### Fix
 
