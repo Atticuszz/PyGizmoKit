@@ -60,18 +60,22 @@ jobs:
         with:
           poetry-version: 1.7.1
 
-      - name: Setup permissions
-        run: |
-          mkdir -p dist
-          sudo chown -R $USER:$USER dist
-          chmod -R 755 dist/
+#      - name: Setup permissions
+#        run: |
+#          mkdir -p dist
+#          sudo chown -R $USER:$USER dist
+#          chmod -R 755 dist/
 
 #      - run: poetry build
       - name: Configure PyPI token
         run: poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
 
       - name: Build and Publish to PyPI
-        run: poetry publish --build -n
+        run: |
+          mkdir -p dist
+          sudo chown -R $USER:$USER dist
+          chmod -R 755 dist/
+          poetry publish --build -n
 
       - name: Publish package distributions to GitHub Releases
         uses: python-semantic-release/upload-to-gh-release@main
