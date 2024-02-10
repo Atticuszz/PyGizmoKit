@@ -2,7 +2,18 @@
 
 
 
+## v0.4.32 (2024-02-10)
+
+### Fix
+
+* fix: downloader failed to auto unzipfile ([`5eec474`](https://github.com/Atticuszz/PyGizmoKit/commit/5eec47403124c492d82aab256ce66fc175c5ade5))
+
+
 ## v0.4.31 (2024-02-10)
+
+### Chore
+
+* chore(release): bump version to v0.4.31 ([`b4d49c8`](https://github.com/Atticuszz/PyGizmoKit/commit/b4d49c8f3d9190a61061c700deab0a86d23fc8e9))
 
 ### Fix
 
