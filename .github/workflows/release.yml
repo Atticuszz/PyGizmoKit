@@ -13,8 +13,8 @@ jobs:
     name: Test / OS ${{ matrix.os }} / Python ${{ matrix.python-version }}
     strategy:
       matrix:
-        os: [ ubuntu-latest , windows-latest]
-        python-version: [ "3.10", "3.11" ,"3.12"]
+        os: [ ubuntu-latest , windows-latest ]
+        python-version: [ "3.10", "3.11" ,"3.12" ]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Clone Repository
@@ -33,11 +33,11 @@ jobs:
       - name: Run Tests
         run: poetry run tests
 
-#      - name: Upload Coverage
-#        uses: codecov/codecov-action@v1
+  #      - name: Upload Coverage
+  #        uses: codecov/codecov-action@v1
 
   publish:
-#    needs: test
+    #    needs: test
     if: ${{ !startsWith(github.event.head_commit.message, 'bump') && !startsWith(github.event.head_commit.message, 'chore') && github.ref == 'refs/heads/main' && github.event_name == 'push' && github.repository_owner == 'Atticuszz' }}
     runs-on: ubuntu-latest
     name: "Bump version, create changelog and publish"
@@ -62,18 +62,11 @@ jobs:
         with:
           poetry-version: 1.7.1
 
+      - name: Configure PyPI token adn Publish to PyPI
+        run: |
+          poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
+          poetry publish
 
-      - name: Configure PyPI token
-        run: poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
-
-      - name: Build and Publish to PyPI
-        run: poetry publish
-#          rm -rf dist/
-#          mkdir -p dist
-#          sudo chown -R $USER:$USER dist
-#          chmod -R 755 dist/
-#          poetry build
-#          poetry publish
 
 
       # upload package distributions to GitHub Releases
