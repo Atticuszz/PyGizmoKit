@@ -33,8 +33,9 @@ jobs:
       - name: Run Tests
         run: poetry run tests
 
-      - name: Upload Coverage
-        uses: codecov/codecov-action@v1
+#      - name: Upload Coverage
+#        uses: codecov/codecov-action@v1
+
   publish:
     needs: test
     if: ${{ !startsWith(github.event.head_commit.message, 'bump') && !startsWith(github.event.head_commit.message, 'chore') && github.ref == 'refs/heads/main' && github.event_name == 'push' && github.repository_owner == 'Atticuszz' }}
@@ -58,7 +59,10 @@ jobs:
         uses: python-semantic-release/python-semantic-release@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
+      - name: Set up Poetry
+        uses: abatilo/actions-poetry@v2.4.0
+        with:
+          poetry-version: 1.7.1
       - name: Configure PyPI token
         run: poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
 
