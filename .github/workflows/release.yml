@@ -63,7 +63,12 @@ jobs:
         uses: abatilo/actions-poetry@v2.4.0
         with:
           poetry-version: 1.7.1
-      - run: poetry install
+      - name: Setup permissions
+        run: |
+          mkdir -p dist
+          sudo chown -R $USER:$USER dist
+          chmod -R 755 dist/
+
       - run: poetry build
       - name: Configure PyPI token
         run: poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
