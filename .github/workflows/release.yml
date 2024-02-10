@@ -64,6 +64,7 @@ jobs:
         with:
           poetry-version: 1.7.1
       - run: poetry install
+      - run: poetry build
       - name: Configure PyPI token
         run: poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
 
