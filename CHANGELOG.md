@@ -2,7 +2,103 @@
 
 
 
+## v0.4.33 (2024-02-24)
+
+### Chore
+
+* chore: add clone all .sh from user and orgs ([`cd44afe`](https://github.com/Atticuszz/PyGizmoKit/commit/cd44afef455c28a4702669adb0a2c651ccc83c31))
+
+### Fix
+
+* fix: markdown import wrong and run scripts in ubunut ([`900d7c7`](https://github.com/Atticuszz/PyGizmoKit/commit/900d7c76b6011090e068b2f3f2cbc179adc04c2f))
+
+### Unknown
+
+* Merge pull request #2 from Atticuszz/dependabot/github_actions/actions/checkout-4
+
+⬆ bump actions/checkout from 2 to 4 ([`1461329`](https://github.com/Atticuszz/PyGizmoKit/commit/1461329653061435b16521211c9a437e7f84845e))
+
+* Merge pull request #3 from Atticuszz/dependabot/github_actions/actions/setup-python-5
+
+⬆ bump actions/setup-python from 2 to 5 ([`0b00e33`](https://github.com/Atticuszz/PyGizmoKit/commit/0b00e33a50b8fa771c5e0c7459d5ad6746e72845))
+
+* Merge pull request #4 from Atticuszz/dependabot/github_actions/abatilo/actions-poetry-3.0.0
+
+⬆ bump abatilo/actions-poetry from 2.4.0 to 3.0.0 ([`ad4769b`](https://github.com/Atticuszz/PyGizmoKit/commit/ad4769bc529511363090ee7d3866c770fcade7b4))
+
+* ⬆ bump abatilo/actions-poetry from 2.4.0 to 3.0.0
+
+Bumps [abatilo/actions-poetry](https://github.com/abatilo/actions-poetry) from 2.4.0 to 3.0.0.
+- [Release notes](https://github.com/abatilo/actions-poetry/releases)
+- [Changelog](https://github.com/abatilo/actions-poetry/blob/master/.releaserc)
+- [Commits](https://github.com/abatilo/actions-poetry/compare/v2.4.0...v3.0.0)
+
+---
+updated-dependencies:
+- dependency-name: abatilo/actions-poetry
+  dependency-type: direct:production
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`720c7d4`](https://github.com/Atticuszz/PyGizmoKit/commit/720c7d4a1f39b2c3f6012585a665caa9d3a71cd5))
+
+* ⬆ bump actions/setup-python from 2 to 5
+
+Bumps [actions/setup-python](https://github.com/actions/setup-python) from 2 to 5.
+- [Release notes](https://github.com/actions/setup-python/releases)
+- [Commits](https://github.com/actions/setup-python/compare/v2...v5)
+
+---
+updated-dependencies:
+- dependency-name: actions/setup-python
+  dependency-type: direct:production
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`cfb8e89`](https://github.com/Atticuszz/PyGizmoKit/commit/cfb8e8908f96e877323cd02b307f50325345bc57))
+
+* ⬆ bump actions/checkout from 2 to 4
+
+Bumps [actions/checkout](https://github.com/actions/checkout) from 2 to 4.
+- [Release notes](https://github.com/actions/checkout/releases)
+- [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/actions/checkout/compare/v2...v4)
+
+---
+updated-dependencies:
+- dependency-name: actions/checkout
+  dependency-type: direct:production
+  update-type: version-update:semver-major
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`7c4cd04`](https://github.com/Atticuszz/PyGizmoKit/commit/7c4cd048f4844b2cdd68b2961946a390e84112e7))
+
+* Merge pull request #1 from Atticuszz/dependabot/pip/pre-commit-3.6.1
+
+⬆ bump pre-commit from 3.6.0 to 3.6.1 ([`92cee28`](https://github.com/Atticuszz/PyGizmoKit/commit/92cee28331d70b867e5e6ff62cb5963229d267ce))
+
+* ⬆ bump pre-commit from 3.6.0 to 3.6.1
+
+Bumps [pre-commit](https://github.com/pre-commit/pre-commit) from 3.6.0 to 3.6.1.
+- [Release notes](https://github.com/pre-commit/pre-commit/releases)
+- [Changelog](https://github.com/pre-commit/pre-commit/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/pre-commit/pre-commit/compare/v3.6.0...v3.6.1)
+
+---
+updated-dependencies:
+- dependency-name: pre-commit
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`65c2321`](https://github.com/Atticuszz/PyGizmoKit/commit/65c23217c6a04eeb73d317c5041a946a2ddf43d5))
+
+
 ## v0.4.32 (2024-02-10)
+
+### Chore
+
+* chore(release): bump version to v0.4.32 ([`a427dd3`](https://github.com/Atticuszz/PyGizmoKit/commit/a427dd37758fa52794df4157b50e75de12c4ca6a))
 
 ### Fix
 
