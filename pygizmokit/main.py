@@ -2,7 +2,7 @@
 
 import argparse
 
-from useful_scripts.markdown.main import print_help as markdown_help
+from pygizmokit.markdown.main import print_help as markdown_help
 
 # 导入其他模块 ...
 

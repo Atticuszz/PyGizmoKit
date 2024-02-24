@@ -2,7 +2,7 @@ import subprocess
 
 
 def run_cmd(cmd: str) -> None:
-    subprocess.run(cmd, shell=True, check=True)
+    subprocess.run(cmd, shell=True, check=True, executable="/bin/bash")
 
 
 def run_tests() -> None:
