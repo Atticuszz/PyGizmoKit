@@ -2,7 +2,22 @@
 
 
 
+## v0.4.35 (2024-02-24)
+
+### Fix
+
+* fix: remove windows tests ([`c9eb756`](https://github.com/Atticuszz/PyGizmoKit/commit/c9eb756b42cb7c987a6e431a2059a4ed3ab4af46))
+
+### Unknown
+
+* Merge remote-tracking branch &#39;origin/main&#39; ([`f467887`](https://github.com/Atticuszz/PyGizmoKit/commit/f467887afb774256191685723c0ab5f432bcdc57))
+
+
 ## v0.4.34 (2024-02-24)
+
+### Chore
+
+* chore(release): bump version to v0.4.34 ([`7ccea65`](https://github.com/Atticuszz/PyGizmoKit/commit/7ccea658f1bc8c974aa5ae5256859717057d4b07))
 
 ### Fix
 
