@@ -25,8 +25,8 @@ pytest-cov = "^4.1.0"
 
 [tool.poetry.scripts]
 tests = 'poetry_scripts:run_tests'
-helper = 'useful_scripts.main:main'
-markdown = 'useful_scripts.markdown.main:main'
+helper = 'pygizmokit.main:main'
+markdown = 'pygizmokit.markdown.main:main'
 
 
 
