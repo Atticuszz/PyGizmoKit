@@ -2,9 +2,22 @@
 
 
 
+## v0.4.34 (2024-02-24)
+
+### Fix
+
+* fix: markdown run wrong ([`512c729`](https://github.com/Atticuszz/PyGizmoKit/commit/512c7292304021eec420839895bddc7c9ebf933c))
+
+### Unknown
+
+* Merge remote-tracking branch &#39;origin/main&#39; ([`9eeb641`](https://github.com/Atticuszz/PyGizmoKit/commit/9eeb6415ece6cd72adff79fb4620a5c26f29ebae))
+
+
 ## v0.4.33 (2024-02-24)
 
 ### Chore
+
+* chore(release): bump version to v0.4.33 ([`5a5088f`](https://github.com/Atticuszz/PyGizmoKit/commit/5a5088fa245b8ff00af63a5f4c64d82a98e3a944))
 
 * chore: add clone all .sh from user and orgs ([`cd44afe`](https://github.com/Atticuszz/PyGizmoKit/commit/cd44afef455c28a4702669adb0a2c651ccc83c31))
 
