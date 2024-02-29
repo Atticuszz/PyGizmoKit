@@ -53,7 +53,7 @@ jobs:
         continue-on-error: true
 
       - name: Run the script for recently modified
-        run: markdown --root ${{ github.workspace }} modify_recent --output ${{ github.workspace }}/README.md --num_commits 15 --dir docs --title "## 最近修改"
+        run: markdown --root ${{ github.workspace }} modify_recent --output ${{ github.workspace }}/README.md --num_commits 15 --dir docs --title "## Modified"
 
 
       - name: Commit README changes
