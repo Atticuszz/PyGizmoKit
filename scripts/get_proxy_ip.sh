@@ -1,4 +1,5 @@
 #!/bin/bash
+export PATH="/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:$PATH"
 
 # 调用Windows的ipconfig命令并解析WLAN适配器的IPv4地址
 wifi_ip=$(powershell.exe ipconfig | grep -A 4 'Wireless LAN adapter WLAN:' | grep 'IPv4 Address' | awk '{print $NF}' | tr -d '\r')
