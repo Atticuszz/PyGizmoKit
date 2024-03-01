@@ -2,7 +2,78 @@
 
 
 
+## v0.4.36 (2024-03-01)
+
+### Fix
+
+* fix: update no_proxy in get_proxy_ip.sh ([`d74b6f8`](https://github.com/Atticuszz/PyGizmoKit/commit/d74b6f83833576aee959f68d6bbd5caa9d6ec1f2))
+
+### Unknown
+
+* Merge remote-tracking branch &#39;origin/main&#39; ([`bcf1932`](https://github.com/Atticuszz/PyGizmoKit/commit/bcf193250124c6a2c6e73152f9c826a108d0f488))
+
+* Merge pull request #8 from Atticuszz/dependabot/pip/rich-13.7.1
+
+⬆ bump rich from 13.7.0 to 13.7.1 ([`a5fa556`](https://github.com/Atticuszz/PyGizmoKit/commit/a5fa5568789279969591155c5ea620e35eae4f53))
+
+* ⬆ bump rich from 13.7.0 to 13.7.1
+
+Bumps [rich](https://github.com/Textualize/rich) from 13.7.0 to 13.7.1.
+- [Release notes](https://github.com/Textualize/rich/releases)
+- [Changelog](https://github.com/Textualize/rich/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/Textualize/rich/compare/v13.7.0...v13.7.1)
+
+---
+updated-dependencies:
+- dependency-name: rich
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`8e1a5ca`](https://github.com/Atticuszz/PyGizmoKit/commit/8e1a5ca4de8d262b8f3970f0b8f667ec4bbb2c0c))
+
+* Merge pull request #5 from Atticuszz/dependabot/pip/pre-commit-3.6.2
+
+⬆ bump pre-commit from 3.6.1 to 3.6.2 ([`79d5fac`](https://github.com/Atticuszz/PyGizmoKit/commit/79d5face5419bbb9046a71ddd12583d58bc2605b))
+
+* add set_proxy_as_start_up.sh ([`382174d`](https://github.com/Atticuszz/PyGizmoKit/commit/382174d720892705818580f0e3ece995c478b6bd))
+
+* Merge remote-tracking branch &#39;origin/main&#39; ([`c4d9b3a`](https://github.com/Atticuszz/PyGizmoKit/commit/c4d9b3a7829d0ae7cc347cb0cdba17b3fa68e61e))
+
+* add get_proxy_ip.sh ([`846bc62`](https://github.com/Atticuszz/PyGizmoKit/commit/846bc62e22feffb8ba95d128b176e74463db5111))
+
+* add auto get proxy ip in windows ([`c786c1a`](https://github.com/Atticuszz/PyGizmoKit/commit/c786c1a2eb30b0999635c92466f6b70c669b17db))
+
+* Merge pull request #7 from Atticuszz/dependabot/pip/pytest-8.0.2
+
+⬆ bump pytest from 8.0.0 to 8.0.2 ([`5485c66`](https://github.com/Atticuszz/PyGizmoKit/commit/5485c667b030f2885a19f090e20f1d0b0b93c68d))
+
+* ⬆ bump pytest from 8.0.0 to 8.0.2
+
+Bumps [pytest](https://github.com/pytest-dev/pytest) from 8.0.0 to 8.0.2.
+- [Release notes](https://github.com/pytest-dev/pytest/releases)
+- [Changelog](https://github.com/pytest-dev/pytest/blob/main/CHANGELOG.rst)
+- [Commits](https://github.com/pytest-dev/pytest/compare/8.0.0...8.0.2)
+
+---
+updated-dependencies:
+- dependency-name: pytest
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`ef0b5bd`](https://github.com/Atticuszz/PyGizmoKit/commit/ef0b5bd2bc1b44d31766b450fe6ddbc98d04e8cb))
+
+* Update README.md ([`355c78e`](https://github.com/Atticuszz/PyGizmoKit/commit/355c78eed1f45a631e2d0c2ede64bdc910346074))
+
+* Update update-readme.yml ([`339f6a4`](https://github.com/Atticuszz/PyGizmoKit/commit/339f6a459f27c19d1afb9ced19e6505d7f9d87e3))
+
+
 ## v0.4.35 (2024-02-24)
+
+### Chore
+
+* chore(release): bump version to v0.4.35 ([`787ae17`](https://github.com/Atticuszz/PyGizmoKit/commit/787ae17d6fcce5637fb11a38cb58d0d19a98891d))
 
 ### Fix
 
@@ -41,6 +112,22 @@
 * fix: markdown import wrong and run scripts in ubunut ([`900d7c7`](https://github.com/Atticuszz/PyGizmoKit/commit/900d7c76b6011090e068b2f3f2cbc179adc04c2f))
 
 ### Unknown
+
+* ⬆ bump pre-commit from 3.6.1 to 3.6.2
+
+Bumps [pre-commit](https://github.com/pre-commit/pre-commit) from 3.6.1 to 3.6.2.
+- [Release notes](https://github.com/pre-commit/pre-commit/releases)
+- [Changelog](https://github.com/pre-commit/pre-commit/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/pre-commit/pre-commit/compare/v3.6.1...v3.6.2)
+
+---
+updated-dependencies:
+- dependency-name: pre-commit
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`0a4a616`](https://github.com/Atticuszz/PyGizmoKit/commit/0a4a616721558c6ea14d22d4a3f146c33b0e63cd))
 
 * Merge pull request #2 from Atticuszz/dependabot/github_actions/actions/checkout-4
 
