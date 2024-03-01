@@ -18,10 +18,13 @@ if [ -n "$wifi_ip" ]; then
     sudo sed -i '/http_proxy=/d' /etc/environment
     sudo sed -i '/https_proxy=/d' /etc/environment
     sudo sed -i '/ftp_proxy=/d' /etc/environment
+    sudo sed -i '/no_proxy=/d' /etc/environment
 
     echo "http_proxy=\"$proxy\"" | sudo tee -a /etc/environment >/dev/null
     echo "https_proxy=\"$proxy\"" | sudo tee -a /etc/environment >/dev/null
     echo "ftp_proxy=\"$proxy\"" | sudo tee -a /etc/environment >/dev/null
+    echo "no_proxy=\"localhost,127.0.0.1,::1\"" | sudo tee -a /etc/environment >/dev/null
+
     source /etc/environment
     echo "Proxy environment variables have been set."
 else
