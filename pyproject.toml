@@ -21,7 +21,7 @@ seaborn = "^0.13.2"
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"
 pre-commit = "^3.6.0"
-pytest-cov = "^4.1.0"
+pytest-cov = ">=4.1,<6.0"
 
 [tool.poetry.scripts]
 tests = 'poetry_scripts:run_tests'
